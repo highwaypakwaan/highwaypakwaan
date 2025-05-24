@@ -1,0 +1,237 @@
+﻿/*Animated Gradiant Background Start*/
+
+body {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100vh;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+/*Animated Gradiant Background End*/
+
+/** {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}*/
+
+contact {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /*    height: 100vh;
+*/ background: #262626;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+/*ul {
+    display: flex;
+}*/
+
+.button {
+    position: relative;
+    display: block;
+    height: 50px;
+    width: 50px;
+    font-size: 30px;
+    line-height: 50px;
+    color: #666;
+    background-color: #171515;
+    cursor: pointer;
+    border-radius: 50%;
+    margin: 0 15px;
+}
+
+    .button:before {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        /*            background-color: #0A82ED;*/
+        height: 100%;
+        width: 100%;
+        border-radius: 50%;
+        z-index: -1;
+        transform: scale(0.9);
+        transition: 0.5s;
+    }
+
+    .button:nth-child(1):hover:before {
+        background-color: #09eb1c;
+    }
+
+    .button:nth-child(2):hover:before {
+        background-color: #04a2f3;
+    }
+
+    .button:nth-child(3):hover:before {
+        background-color: #e23670;
+    }
+
+    .button:nth-child(4):hover:before {
+        background-color: #2a6cbb;
+    }
+
+    .button:nth-child(5):hover:before {
+        background-color: #ff1a1a;
+    }
+
+    .button:hover:before {
+        filter: blur(4px);
+        box-shadow: 0 0 15px #09eb1c;
+        transform: scale(1.2);
+    }
+
+    .button:nth-child(1):hover:before {
+        filter: blur(4px);
+        box-shadow: 0 0 15px #09eb1c;
+        transform: scale(1.2);
+    }
+
+    .button:nth-child(2):hover:before {
+        filter: blur(4px);
+        box-shadow: 0 0 15px #190b78;
+        transform: scale(1.2);
+    }
+
+    .button:nth-child(3):hover:before {
+        filter: blur(4px);
+        box-shadow: 0 0 15px #e23670;
+        transform: scale(1.2);
+    }
+
+    .button:nth-child(4):hover:before {
+        filter: blur(4px);
+        box-shadow: 0 0 15px #2a6cbb;
+        transform: scale(1.2);
+    }
+
+    .button:nth-child(5):hover:before {
+        filter: blur(4px);
+        box-shadow: 0 0 15px #ff1a1a;
+        transform: scale(1.2);
+    }
+
+    .button:hover:nth-child(1) {
+        color: #0b7814;
+        box-shadow: 0 0 15px #0b7814;
+        text-shadow: 0 0 15px #0b7814;
+    }
+
+    .button:hover:nth-child(2) {
+        color: #190b78;
+        box-shadow: 0 0 15px #190b78;
+        text-shadow: 0 0 15px #190b78;
+    }
+
+    .button:hover:nth-child(3) {
+        color: #8c0b1c;
+        box-shadow: 0 0 15px #8c0b1c;
+        text-shadow: 0 0 15px #8c0b1c;
+    }
+
+    .button:hover:nth-child(4) {
+        color: #2a6cbb;
+        box-shadow: 0 0 15px #2a6cbb;
+        text-shadow: 0 0 15px #2a6cbb;
+    }
+
+    .button:hover:nth-child(5) {
+        color: #ff1a1a;
+        box-shadow: 0 0 15px #ff1a1a;
+        text-shadow: 0 0 15px #ff1a1a;
+    }
+
+/*Button New*/
+.btn {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+    .btn button {
+        width: 100%;
+        margin: 10px 0;
+        position: relative;
+        height: 60px;
+        display: inline-block;
+        background: #fff;
+        border-radius: 10%;
+    }
+
+        .btn button:before,
+        .btn button:after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            transition: 0.5s;
+            background: #f00
+        }
+
+        .btn button:nth-child(odd):before,
+        .btn button:nth-child(odd):after {
+            background: linear-gradient(45deg, #00ccff, #0e1538, #d400d4)
+        }
+
+        .btn button:nth-child(even):before,
+        .btn button:nth-child(even):after {
+            background: linear-gradient(45deg, #f0075b, #0e1538, #1aff22);
+        }
+
+        .btn button:hover:before {
+            inset: -3px;
+        }
+
+        .btn button:hover:after {
+            inset: -3px;
+            filter: blur(10px);
+        }
+
+        .btn button span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: inline-block;
+            background: #0e1538;
+            z-index: 10;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 12px;
+/*            text-transform: uppercase;
+*/            letter-spacing: 2px;
+            color: #fff;
+            border: 1px solid #040a29;
+            overflow: hidden;
+        }
+
+            .btn button span::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: -50%;
+                width: 100%;
+                height: 100%;
+                background: rgba(255,255,255,0.075);
+                transform: skew(25deg)
+            }

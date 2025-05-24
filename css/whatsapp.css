@@ -1,0 +1,9 @@
+﻿.whatsapp_btn{
+position:fixed;
+bottom:40px;
+right:20px;
+}
+.wappbutton {
+    width: 50px;
+    border-radius: 50px;
+}
