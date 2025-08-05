@@ -266,7 +266,7 @@
 
 
 
-            <!--<div class="items" style="display: block; width: 90%; margin:0 5%">
+            <div class="items" style="display: block; width: 90%; margin:0 5%">
                 <div>
                     <br />
                     <details class="card-details">
@@ -280,26 +280,18 @@
                                 <img src="img/menu/3.png" style="width: 100%; margin: auto; border-radius: 10px" />
                                 <img src="img/menu/4.png" style="width: 100%; margin: auto; border-radius: 10px" />
                                 <img src="img/menu/5.png" style="width: 100%; margin: auto; border-radius: 10px" />
-                                <img src="img/menu/6.png" style="width: 100%; margin: auto; border-radius: 10px" />-->
+                                <img src="img/menu/6.png" style="width: 100%; margin: auto; border-radius: 10px" />
                                 <!--<button class="animated_button btncolormehroon" onclick="window.open('files/Menu.pdf', '_blank')">
                                     <h5>Our Delicious Menu</h5><i class="animation"></i>
                                 </button>
                                 <button class="animated_button btncolorpurple" onclick="window.open('files/TiffinMenu.pdf', '_blank')">
                                     <h5>Tiffin Menu</h5><i class="animation"></i>
                                 </button>-->
-                            <!--</div>
+                            </div>
                         </div>
                     </details>
                 </div>
-            </div>-->
-
-
-
-
-
-
-
-
+            </div>
             <!--<button class="animated_button btncolormehroon" onclick="window.open('files/Menu.pdf', '_blank')">-->
             <!--<img src="./logos/link.png" alt="" class="icon">-->
             <!--<h5>Our Delicious Menu</h5><i class="animation"></i>
@@ -712,10 +704,8 @@
                     <a class="animated_button btncolorgreen" style="text-decoration:none;font-weight:600" href="https://services.yourecharge.in"><i class="animation"></i>Royal Passion <br /> Infotech & Telecom<i class="animation"></i></a>
                 </p>
             </div>
+        </footer>
     </div>
-
-
-    </footer>
 
     <script>
 
@@ -801,64 +791,64 @@ END:VCARD
 
 
         /* Form */
-        document.getElementById("form").addEventListener("submit", function (e) {
-            e.preventDefault(); // Prevent the default form submission
-            document.getElementById("message").textContent = "Submitting..";
-            document.getElementById("message").style.display = "block";
-            document.getElementById("submit-button").disabled = true;
+        //document.getElementById("form").addEventListener("submit", function (e) {
+        //    e.preventDefault(); // Prevent the default form submission
+        //    document.getElementById("message").textContent = "Submitting..";
+        //    document.getElementById("message").style.display = "block";
+        //    document.getElementById("submit-button").disabled = true;
 
-            // Collect the form data
-            var formData = new FormData(this);
-            var keyValuePairs = [];
-            for (var pair of formData.entries()) {
-                keyValuePairs.push(pair[0] + "=" + pair[1]);
-            }
+        //    // Collect the form data
+        //    var formData = new FormData(this);
+        //    var keyValuePairs = [];
+        //    for (var pair of formData.entries()) {
+        //        keyValuePairs.push(pair[0] + "=" + pair[1]);
+        //    }
 
-            var formDataString = keyValuePairs.join("&");
+        //    var formDataString = keyValuePairs.join("&");
 
-            // Send a POST request to your Google Apps Script
-            fetch(
-                "https://script.google.com/macros/s/AKfycbyuerIAkruTDGX6mzlPvw7ZyXya5MFyx83zHQ1ynlonMWB6C9hRp4dCYKXeWtWD3iE/exec",
-                {
-                    redirect: "follow",
-                    method: "POST",
-                    body: formDataString,
-                    headers: {
-                        "Content-Type": "text/plain;charset=utf-8",
-                    },
-                }
-            )
-                .then(function (response) {
-                    // Check if the request was successful
-                    if (response) {
-                        return response; // Assuming your script returns JSON response
-                    } else {
-                        throw new Error("Failed to submit the form.");
-                    }
-                })
-                .then(function (data) {
-                    // Display a success message
-                    document.getElementById("message").textContent =
-                        "Thank you ! Your form submitted successfully!";
-                    document.getElementById("message").style.display = "block";
-                    document.getElementById("message").style.backgroundColor = "green";
-                    document.getElementById("message").style.color = "beige";
-                    document.getElementById("submit-button").disabled = false;
-                    document.getElementById("form").reset();
+        //    // Send a POST request to your Google Apps Script
+        //    fetch(
+        //        "https://script.google.com/macros/s/AKfycbyuerIAkruTDGX6mzlPvw7ZyXya5MFyx83zHQ1ynlonMWB6C9hRp4dCYKXeWtWD3iE/exec",
+        //        {
+        //            redirect: "follow",
+        //            method: "POST",
+        //            body: formDataString,
+        //            headers: {
+        //                "Content-Type": "text/plain;charset=utf-8",
+        //            },
+        //        }
+        //    )
+        //        .then(function (response) {
+        //            // Check if the request was successful
+        //            if (response) {
+        //                return response; // Assuming your script returns JSON response
+        //            } else {
+        //                throw new Error("Failed to submit the form.");
+        //            }
+        //        })
+        //        .then(function (data) {
+        //            // Display a success message
+        //            document.getElementById("message").textContent =
+        //                "Thank you ! Your form submitted successfully!";
+        //            document.getElementById("message").style.display = "block";
+        //            document.getElementById("message").style.backgroundColor = "green";
+        //            document.getElementById("message").style.color = "beige";
+        //            document.getElementById("submit-button").disabled = false;
+        //            document.getElementById("form").reset();
 
-                    setTimeout(function () {
-                        document.getElementById("message").textContent = "";
-                        document.getElementById("message").style.display = "none";
-                    }, 2600);
-                })
-                .catch(function (error) {
-                    // Handle errors, you can display an error message here
-                    console.error(error);
-                    document.getElementById("message").textContent =
-                        "An error occurred while submitting the form.";
-                    document.getElementById("message").style.display = "block";
-                });
-        });
+        //            setTimeout(function () {
+        //                document.getElementById("message").textContent = "";
+        //                document.getElementById("message").style.display = "none";
+        //            }, 2600);
+        //        })
+        //        .catch(function (error) {
+        //            // Handle errors, you can display an error message here
+        //            console.error(error);
+        //            document.getElementById("message").textContent =
+        //                "An error occurred while submitting the form.";
+        //            document.getElementById("message").style.display = "block";
+        //        });
+        //});
 
         /*Toggle Details Start*/
         document.querySelectorAll('.card-details').forEach(details => {
